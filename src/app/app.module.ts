@@ -8,6 +8,11 @@ import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { ProductPagiComponent } from './common/product-pagi/product-pagi.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { ProductListComponent } from './common/product-list/product-list.component';
+import { ProductCardComponent } from './common/product-card/product-card.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,11 @@ import { ProductPagiComponent } from './common/product-pagi/product-pagi.compone
     Cat01Component,
     Cat02Component,
     HomeComponent,
-    ProductPagiComponent
+    ProductPagiComponent,
+    FilterPipe,
+    ProductListComponent,
+    ProductCardComponent,
+
   ],
   imports: [
     BrowserModule,
