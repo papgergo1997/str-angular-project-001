@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat02Component implements OnInit {
 
-  productList: Product[] = this.productService.list.filter(item => item.catId === 1);
+  productList: Product[] = this.productService.list.filter(item => item.catId === 2);
 
   constructor(
     private productService: ProductService

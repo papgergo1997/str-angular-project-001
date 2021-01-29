@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
-  productList: Product[] = this.productService.list.filter(item => item.catId === 2);
+  productList: Product[] = this.productService.list.filter(item => item.catId === 1);
 
   constructor(
     private productService: ProductService

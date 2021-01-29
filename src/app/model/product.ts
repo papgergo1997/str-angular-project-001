@@ -8,6 +8,7 @@ export class Product {
     salesPrice: number = 0;
     stock: number = 0;
     featured: boolean = false;
+    featured2: string = '';
     active: boolean = true;
 
     constructor(properties?: Product) {
@@ -21,6 +22,7 @@ export class Product {
             this.salesPrice = properties.salesPrice || 0;
             this.stock = properties.price || 0;
             this.featured = properties.featured || false;
+            this.featured2 = properties.featured2 || '';
             this.active = properties.active || true;
         }
     }
