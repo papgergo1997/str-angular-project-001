@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product';
 
 @Component({
   selector: 'app-product-pagi',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-pagi.component.scss']
 })
 export class ProductPagiComponent implements OnInit {
+
+  @Input() products: Array<Product>;
 
   constructor() { }
 
