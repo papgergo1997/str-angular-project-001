@@ -1,8 +1,11 @@
 <div class="headline d-flex flex-column justify-content-center py-5">
     <img class="logo mx-auto" src="../../assets/img/800/logo.png" alt="logó">
 </div>
+<h3 class="featured-title text-center py-4 mb-0">Kiemelt ajánlataink</h3>
 <app-product-pagi class="product-pagi text-center d-flex flex-column mx-auto py-5" [products]="productFeatured">
 </app-product-pagi>
-<app-product-pagi [products]="productSales"></app-product-pagi>
+<h3 class="sales-title text-center py-4 mb-0">Akciós ajánlataink</h3>
+<app-product-pagi class="product-pagi text-center d-flex flex-column mx-auto py-5" [products]="productSales">
+</app-product-pagi>
 
 <app-footer class="footer nav nav-dark bg-dark py-5 text-center d-flex flex-column"></app-footer>
