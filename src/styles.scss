@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    color: rgb(37, 170, 226);  
+}
+
+.navbar-brand {
+    color:  rgb(37, 170, 226)!important;
+}
+
+.headline{
+    height: 300px;
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4D1BAQHsJMyyy1dd-A/company-background_10000/0/1551872269514?e=2159024400&v=beta&t=nZ1g3SGRvXPr6Iz7pQ_IUov_15ureNEQ7poCZ0fR6fQ);
+    background-attachment: fixed; 
+    background-size: 165%;
+    width: 100%;
+    box-shadow: 0 0 9px black;
+    .logo{
+        width: 50%;
+    }
+}
+
+.product-pagi {
+    background-image: url(/src/assets/img/800/bg-pattern.png), linear-gradient(to right, rgb(37, 170, 226), rgb(200, 200, 200));
+    background-attachment: fixed;
+    .card {
+        box-shadow: 0 0 9px grey;
+        border-radius: 10px;
+        background-color: #efefef;
+    }
+}
+
+
+.product-salesprice{
+    font-size: large;
+    color: green;
+}
+
+.featured-title {
+    color: rgb(53, 58, 64);
+}
+.list-title {
+    color: rgb(37, 170, 226);
+}
+.list-text {
+    color: rgb(37, 170, 226);
+}
+
+/*Product-list*/
+
+.product-list {
+    background-color: rgb(73, 78, 84);
+    box-shadow: 0 0 9px black;
+    .card {
+        background-color: #efefef;
+    }
+}
+
+.footer {
+    border-top: 1px solid  rgb(43, 48, 54);
+}
