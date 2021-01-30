@@ -1,26 +1,22 @@
-<form class="form-inline my-2 my-lg-0 m-5">
+<form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" (keydown)="onChangeSearch($event, 'name')">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés névben</button>
 </form>
-<form class="form-inline my-2 my-lg-0 m-5">
+<form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Search"
         (keydown)="onChangeSearch($event, 'description')">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés útleírásban</button>
 </form>
 
-<br>
-<br>
+
 <button class="btn btn-outline-primary" (click)="onChangeSort('price')">Rendezés ár szerint</button>
 <button class="btn btn-outline-primary" (click)="onChangeSort('name')">Rendezés név szerint</button>
 <button class="btn btn-outline-primary" (click)="onChangeSortFeatured()">Mutasd a kiemelteket</button>
 <button class="btn btn-outline-primary" (click)="onChangeSortSales()">Mutasd az akciósokat</button>
-<br>
-<br>
 
-<br>
-<h2>Összes út</h2>
 
-<div class="row">
-    <app-product-card *ngFor="let product of products | filter: search: filterKey | sort: sortKey" [product]=" product">
+<div class="row mx-auto m-o">
+    <app-product-card class="col-12 col-lg-2 mx-auto mt-5"
+        *ngFor="let product of products | filter: search: filterKey | sort: sortKey" [product]=" product">
     </app-product-card>
 </div>

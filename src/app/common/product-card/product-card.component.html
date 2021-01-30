@@ -1,11 +1,11 @@
-
-<div class="card text-center" style="width: 14rem;">
-<div class="card text-center" style="width: 18rem;">
+<div class="card text-center h-100 d-flex">
     <img src="assets/img/800/{{product.image}}.jpg" class="card-img-top" alt="{{product.image}}">
-    <div class="card-body text-center">
+    <div class="card-body text-center d-flex flex-column">
         <h5 class="card-title">{{product.name}}</h5>
-        <p class="card-text">{{product.price}} Ft</p>
+        <p class="card-text product-price">{{product.price}} Ft <br> <span class="product-salesprice"
+                *ngIf="product.salesPrice">{{product.salesPrice}} Ft</span>
+        </p>
         <p class="card-text">{{product.description}}</p>
-        <a href="#" class="btn btn-primary">View trip</a>
+        <a href="#" class="btn btn-primary mt-auto">View trip</a>
     </div>
 </div>
