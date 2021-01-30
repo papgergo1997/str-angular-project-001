@@ -55,7 +55,7 @@ export class ProductService {
       price: 16000,
       salesPrice: 0,
       stock: 16,
-      featured: false,
+      featured: true,
       featured2: "",
       active: false
     },
@@ -107,7 +107,7 @@ export class ProductService {
       price: 12000,
       salesPrice: 0,
       stock: 14,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -133,7 +133,7 @@ export class ProductService {
       price: 18000,
       salesPrice: 17000,
       stock: 16,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -198,7 +198,7 @@ export class ProductService {
       price: 17000,
       salesPrice: 15000,
       stock: 12,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -211,7 +211,7 @@ export class ProductService {
       price: 16000,
       salesPrice: 0,
       stock: 18,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -341,7 +341,7 @@ export class ProductService {
       price: 220000,
       salesPrice: 0,
       stock: 50,
-      featured: false,
+      featured: true,
       featured2: "",
       active: false
     },
@@ -354,7 +354,7 @@ export class ProductService {
       price: 210000,
       salesPrice: 0,
       stock: 50,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -367,7 +367,7 @@ export class ProductService {
       price: 185000,
       salesPrice: 0,
       stock: 50,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -380,7 +380,7 @@ export class ProductService {
       price: 330000,
       salesPrice: 0,
       stock: 50,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },
@@ -393,7 +393,7 @@ export class ProductService {
       price: 390000,
       salesPrice: 310000,
       stock: 50,
-      featured: false,
+      featured: true,
       featured2: "",
       active: true
     },

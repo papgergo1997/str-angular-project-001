@@ -9,7 +9,9 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductListComponent implements OnInit {
 
-  @Input() search: string = '';
+  search: string = '';
+  sortKey: string = '';
+  filterKey: string = '';
   @Input() products: Product[] = [];
 
   constructor() { }
@@ -17,8 +19,18 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChangeSearch(event: Event): void {
+  onChangeSearch(event: Event, filterKey: string): void {
     this.search = (event.target as HTMLInputElement).value;
+    this.filterKey = filterKey;
+  }
+  onChangeSort(data: string): void {
+    this.sortKey = data;
+  }
+  onChangeSortFeatured(): void {
+    this.products = this.products.filter(product => product.featured);
+  }
+  onChangeSortSales(): void {
+    this.products = this.products.filter(product => product.salesPrice > 0);
   }
 
 }
