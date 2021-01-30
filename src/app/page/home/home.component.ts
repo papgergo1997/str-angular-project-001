@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
 
   productList: Product[] = this.productService.list;
 
+  productFeatured: Product[] = this.productService.list.filter(product => product.featured)
+
+  productSales: Product[] = this.productService.list.filter(product => product.salesPrice < product.price && product.salesPrice > 0)
+
   constructor(
     private productService: ProductService
   ) { }

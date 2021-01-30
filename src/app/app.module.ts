@@ -10,6 +10,8 @@ import { HomeComponent } from './page/home/home.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
+import { ProductPagiComponent } from './common/product-pagi/product-pagi.component';
+import { SortPipe } from './pipe/sort.pipe';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
     FilterPipe,
     ProductListComponent,
     ProductCardComponent,
+    ProductPagiComponent,
+    SortPipe,
   ],
   imports: [
     BrowserModule,
