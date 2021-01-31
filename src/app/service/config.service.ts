@@ -11,12 +11,13 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'Nyolcas Terminál';
 
   menuItems: IMenuItem[] = [
-    {text: 'Home', link: '/', icon: 'home'},
-    {text: 'Category01', link: '/cat01'},
-    {text: 'Category02', link: '/cat02'},
+    { text: 'Home', link: '/', icon: 'home' },
+    { text: 'Külföldi utak', link: '/kulfoldi-utak' },
+    { text: 'Belföldi utak', link: '/belfoldi-utak' },
+    { text: 'Kapcsolat', link: '/kapcsolat' },
   ];
 
   constructor() { }
