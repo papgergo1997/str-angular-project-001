@@ -49,7 +49,7 @@ export class ProductService {
     {
       id: 4,
       catId: 2,
-      name: "Fertődi kirándulás, az Esterházy-kastély felfedezése",
+      name: "Fertődi kirándulás, az Eszterházy-kastély felfedezése",
       description: "1 napos kirándulás. Ellátás nélkül.",
       image: "eszterhazy-kastely",
       price: 16000,
@@ -127,7 +127,7 @@ export class ProductService {
     {
       id: 10,
       catId: 2,
-      name: "A hortobágyi nemzeti park",
+      name: "Hortobágyi nemzeti park",
       description: "1 napos kirándulás. Ellátás nélkül.",
       image: "hortobagy",
       price: 18000,
