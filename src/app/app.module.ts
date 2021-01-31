@@ -10,8 +10,10 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { ProductPagiComponent } from './common/product-pagi/product-pagi.component';
 import { SortPipe } from './pipe/sort.pipe';
+import { EmployeeCardComponent } from './common/employee-card/employee-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+
 
 
 
@@ -26,6 +28,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     ProductCardComponent,
     ProductPagiComponent,
     SortPipe,
+    EmployeeCardComponent,
     FooterComponent,
     ProductListComponent,
   ],
