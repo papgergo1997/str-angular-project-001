@@ -12,6 +12,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { ProductPagiComponent } from './common/product-pagi/product-pagi.component';
 import { SortPipe } from './pipe/sort.pipe';
+import { EmployeeCardComponent } from './common/employee-card/employee-card.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SortPipe } from './pipe/sort.pipe';
     ProductCardComponent,
     ProductPagiComponent,
     SortPipe,
+    EmployeeCardComponent,
   ],
   imports: [
     BrowserModule,
