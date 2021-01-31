@@ -1,5 +1,7 @@
+
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 
 @Component({
@@ -9,17 +11,25 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductPagiComponent implements OnInit {
 
+
   index: number = 1;
+  
   buttons: number[] = [];
-
+  
   @Input() products: Product[];
-
+  
   constructor() {
 
   }
 
+  @Input() products: Array<Product>;
+
+  constructor() { }
+v
+
   ngOnInit(): void {
   }
+
 
   buttonsNumberArray(array: Product[]): number[] {
     for (let i = 1; i <= Math.ceil(array.length / 5); i++) {
@@ -42,4 +52,5 @@ export class ProductPagiComponent implements OnInit {
     if (this.index < 1) { this.index = Math.ceil(this.products.length / 5) }
     return array.slice((this.index - 1) * 5, this.index * 5)
   }
+
 }
