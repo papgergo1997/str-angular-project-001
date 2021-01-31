@@ -1,11 +1,11 @@
-<form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
+<form class="form my-2 my-lg-0 m-5 col-10 mx-auto d-flex flex-column">
     <input class="form-control mr-sm-2" type="text" placeholder="Keresés" (keydown)="onChangeSearch($event, 'name')">
-    <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">Keresés névben</button>
+    <button class="btn btn-outline-primary my-2 my-2 mx-auto" type="submit">Keresés névben</button>
 </form>
-<form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
+<form class="form my-2 my-lg-0 m-5 col-10 mx-auto d-flex flex-column">
     <input class="form-control mr-sm-2" type="text" placeholder="Keresés"
         (keydown)="onChangeSearch($event, 'description')">
-    <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">Keresés útleírásban</button>
+    <button class="btn btn-outline-primary my-2 my-2 mx-auto" type="submit">Keresés útleírásban</button>
 </form>
 
 <div class="sort-buttons d-flex">
@@ -16,7 +16,7 @@
 </div>
 
 <div class="row mx-auto m-o">
-    <app-product-card class="col-12 col-lg-2 mx-auto mt-5"
+    <app-product-card class="col-12 col-md-6 col-lg-2 mx-auto mt-5"
         *ngFor="let product of products | filter: search: filterKey | sort: sortKey" [product]=" product">
     </app-product-card>
 </div>
