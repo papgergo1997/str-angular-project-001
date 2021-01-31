@@ -1,19 +1,19 @@
 <form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Keresés" (keydown)="onChangeSearch($event, 'name')">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés névben</button>
+    <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">Keresés névben</button>
 </form>
 <form class="form-inline my-2 my-lg-0 m-5 col-10 mx-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Keresés"
         (keydown)="onChangeSearch($event, 'description')">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés útleírásban</button>
+    <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">Keresés útleírásban</button>
 </form>
 
-
-<button class="btn btn-outline-primary" (click)="onChangeSort('price')">Rendezés ár szerint</button>
-<button class="btn btn-outline-primary" (click)="onChangeSort('name')">Rendezés név szerint</button>
-<button class="btn btn-outline-primary" (click)="onChangeSortFeatured()">Mutasd a kiemelteket</button>
-<button class="btn btn-outline-primary" (click)="onChangeSortSales()">Mutasd az akciósokat</button>
-
+<div class="sort-buttons d-flex">
+    <button class="btn btn-outline-primary mx-1" (click)="onChangeSort('price')">Rendezés ár szerint</button>
+    <button class="btn btn-outline-primary mx-1" (click)="onChangeSort('name')">Rendezés név szerint</button>
+    <button class="btn btn-outline-primary mx-1" (click)="onChangeSortFeatured()">Mutasd a kiemelteket</button>
+    <button class="btn btn-outline-primary mx-1" (click)="onChangeSortSales()">Mutasd az akciósokat</button>
+</div>
 
 <div class="row mx-auto m-o">
     <app-product-card class="col-12 col-lg-2 mx-auto mt-5"
