@@ -1,12 +1,11 @@
 <div class="headline-local d-flex flex-column justify-content-center py-5">
     <img class="logo mx-auto" src="../../assets/img/800/logo.png" alt="logó">
-    <h2 class="text-center">Belföldi utak</h2>
 </div>
-<!-- <div class="sales-title text-center py-4 mb-0">
+<div class="sales-title text-center py-4 mb-0">
     <h2 class="text-center">Belföldi utak</h2>
     <h3>Akciós ajánlataink</h3>
-</div> -->
-<h3 class="sales-title text-center py-4 mb-0">Kiemelt ajánlataink</h3>
+</div>
+
 <app-product-pagi class="product-pagi text-center d-flex flex-column mx-auto py-5" [products]="productFeatured">
 </app-product-pagi>
 
@@ -15,4 +14,5 @@
     <p class="list-text text-center">Keressen ajánlataink között</p>
     <app-product-list [products]="productList"></app-product-list>
 </div>
+
 <app-footer class="footer nav nav-dark bg-dark py-5 text-center d-flex flex-column"></app-footer>

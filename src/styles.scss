@@ -137,9 +137,11 @@ body {
     background-size: 138%;
     width: 100%;
     box-shadow: 0 0 9px black;
-    .logo{
-        width: 35%;
-    }
+    
+}
+
+.logo{
+    width: 35%;
 }
 
 @media screen and (min-width: 768px) {
@@ -151,5 +153,53 @@ body {
     }
     .headline-local {
         background-size: 138%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .headline-home {
+        background-size: 100%;   
+        height: 400px;     
+    }
+    .headline-foreign {
+        background-size: 99%;
+        height: 400px;
+    }
+    .headline-local {
+        background-size: 120%;
+        height: 400px;
+    }
+    .logo {
+        width: 25% !important;
+    }
+    .card-title {
+        font-size: medium;
+    }
+    
+    .card-text {
+        font-size: small;
+    }
+
+    .product-salesprice{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headline-home {
+        background-size: 100%;
+        background-position: 0 -400%;
+    }
+    .headline-foreign {
+        background-size: 100%;
+        background-position: 0 150%;
+    }
+    .headline-local {
+        background-size: 138%;
+        background-position: 0 140%;
+    }
+    .logo{
+        width: 20% !important
     }
 }
