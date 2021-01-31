@@ -1,6 +1,4 @@
 
-import { Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 
@@ -13,19 +11,14 @@ export class ProductPagiComponent implements OnInit {
 
 
   index: number = 1;
-  
+
   buttons: number[] = [];
-  
+
   @Input() products: Product[];
-  
+
   constructor() {
 
   }
-
-  @Input() products: Array<Product>;
-
-  constructor() { }
-v
 
   ngOnInit(): void {
   }

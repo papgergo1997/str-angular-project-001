@@ -1,1 +1,205 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    src: url(../src/assets/fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
+    font-family: "catamaran";
+    font-weight: 100;
+}
+
+@font-face {
+    src: url(../src/assets/fonts/Lato/Lato-Regular.ttf);
+    font-family: "lato";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(../src/assets/fonts/Mulish/Mulish-VariableFont_wght.ttf);
+    font-family: "muli";
+    font-weight: 400;
+}
+
+
+body {
+    margin: 0;
+    color: rgb(37, 170, 226);  
+}
+
+.navbar {
+    box-shadow: 0 0 9px black;
+}
+
+.navbar-brand {
+    color:  rgb(37, 170, 226)!important;
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+}
+
+.headline-home{
+    height: 300px;
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4D1BAQHsJMyyy1dd-A/company-background_10000/0/1551872269514?e=2159024400&v=beta&t=nZ1g3SGRvXPr6Iz7pQ_IUov_15ureNEQ7poCZ0fR6fQ);
+    background-attachment: fixed; 
+    background-size: 180%;
+    width: 100%;
+    box-shadow: 0 0 9px black;
+    .logo{
+        width: 35%;
+    }
+}
+
+.card-title {
+    font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+.card-text {
+    font-family: "muli", Arial, Helvetica, sans-serif;
+}
+
+.product-pagi {
+    background-image: url(../src/assets/img/800/bg-pattern.png), linear-gradient(to right, rgb(37, 170, 226), rgb(200, 200, 200));
+    background-attachment: fixed;
+    .card {
+        box-shadow: 0 0 9px grey;
+        border-radius: 10px;
+        background-color: #efefef;        
+    }
+}
+
+
+.product-salesprice{
+    font-size: 23px;
+    color: green;
+}
+
+.featured-title {
+    color: rgb(37, 170, 226);
+    background-color: rgb(53, 58, 64);
+    box-shadow: 0 0 9px black;
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+}
+.sales-title {
+    color: rgb(37, 170, 226);
+    background-color: rgb(53, 58, 64);
+    box-shadow: 0 0 9px black;
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+}
+.list-title {
+    color: rgb(37, 170, 226);
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+}
+.list-text {
+    color: rgb(37, 170, 226);
+    font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+/*Product-list*/
+
+.product-list {
+    background-color: rgb(73, 78, 84);
+    box-shadow: 0 0 9px black;
+    .card {
+        background-color: #efefef;
+    }
+}
+
+.footer {
+    border-top: 1px solid  rgb(43, 48, 54);
+    box-shadow: 0 0 9px black;
+    .copyright {
+        font-size: small;
+        font-family: "muli", Arial, Helvetica, sans-serif;
+    }
+}
+
+.headline-local {
+    //background-image: url(https://anandvihartampa.com/wp-content/uploads/2016/03/flight1320x742.jpg);
+   // background-image: url(https://techworld.hu/wp-content/uploads/2019/11/msf.png);
+    background-image: url(https://www.alwayswanderlust.com/wp-content/uploads/2016/11/Europe-Hungary-Budapest-Gelert-Hill-View-Panorama.jpg);
+    height: 300px;
+    background-attachment: fixed; 
+    background-position:initial;
+    background-size: 193%;
+    width: 100%;
+    box-shadow: 0 0 9px black;
+    .logo{
+        width: 35%;
+    }
+}
+
+.headline-foreign {
+    //background-image: url(https://anandvihartampa.com/wp-content/uploads/2016/03/flight1320x742.jpg);
+    background-image: url(https://techworld.hu/wp-content/uploads/2019/11/msf.png);
+    //background-image: url(https://www.alwayswanderlust.com/wp-content/uploads/2016/11/Europe-Hungary-Budapest-Gelert-Hill-View-Panorama.jpg);
+    background-position: center top;
+    height: 300px;
+    background-attachment: fixed; 
+    background-position:initial;
+    background-size: 138%;
+    width: 100%;
+    box-shadow: 0 0 9px black;
+    
+}
+
+.logo{
+    width: 35%;
+}
+
+@media screen and (min-width: 768px) {
+    .headline-home {
+        background-size: 130%;
+    }
+    .headline-foreign {
+        background-size: 100%;
+    }
+    .headline-local {
+        background-size: 138%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .headline-home {
+        background-size: 100%;   
+        height: 400px;     
+    }
+    .headline-foreign {
+        background-size: 99%;
+        height: 400px;
+    }
+    .headline-local {
+        background-size: 120%;
+        height: 400px;
+    }
+    .logo {
+        width: 25% !important;
+    }
+    .card-title {
+        font-size: medium;
+    }
+    
+    .card-text {
+        font-size: small;
+    }
+
+    .product-salesprice{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headline-home {
+        background-size: 100%;
+        background-position: 0 -400%;
+    }
+    .headline-foreign {
+        background-size: 100%;
+        background-position: 0 150%;
+    }
+    .headline-local {
+        background-size: 138%;
+        background-position: 0 140%;
+    }
+    .logo{
+        width: 20% !important
+    }
+}

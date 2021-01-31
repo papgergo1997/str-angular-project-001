@@ -1,18 +1,15 @@
-
-<div>
-    <div class="row">
-        <app-product-card [product]="product" *ngFor="let product of paginationNumber(products, index)">
-        </app-product-card>
-    </div>
-
-    <button class="btn btn-outline-primary" (click)="paginationBack(products)">Vissza</button>
-
-    <button class="btn btn-outline-primary" *ngFor="let button of buttonsNumberArray(products)"
-        (click)="paginationNumber(products, button)">{{ button }}</button>
-    <button class="btn btn-outline-primary" (click)="paginationNext(products)">Előre</button>
-<p>product-pagi works!</p>
-<div class="container">
-  <div class="row">
-    <app-product-card [product]="product" *ngFor="let product of products"></app-product-card>
+<div class="container col-lg-12">
+  <div class="row mx-auto m-o">
+    <div class="col-lg-1"></div>
+    <app-product-card class="col-10 col-md-5 col-lg-2 mx-auto mx-lg-0 mb-4 px-lg-0" [product]="product"
+      *ngFor="let product of paginationNumber(products, index)">
+    </app-product-card>
   </div>
+
+  <button class="btn btn-outline-dark" (click)="paginationBack(products)">Vissza</button>
+
+  <button class="btn btn-outline-dark" *ngFor="let button of buttonsNumberArray(products)"
+    (click)="paginationNumber(products, button)">{{ button }}</button>
+  <button class="btn btn-outline-dark" (click)="paginationNext(products)">Előre</button>
+
 </div>
