@@ -13,6 +13,7 @@ import { SortPipe } from './pipe/sort.pipe';
 import { EmployeeCardComponent } from './common/employee-card/employee-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { NumberHuPipe } from './pipe/number-hu.pipe';
 
 
 
@@ -31,6 +32,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     EmployeeCardComponent,
     FooterComponent,
     ProductListComponent,
+    NumberHuPipe,
   ],
   imports: [
     BrowserModule,
