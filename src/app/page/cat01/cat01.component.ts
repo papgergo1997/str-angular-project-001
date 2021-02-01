@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class Cat01Component implements OnInit {
   productList: Product[] = this.productService.list.filter(item => item.catId === 1);
   productFeatured: Product[] = this.productList.filter(product => product.featured);
+  productSales: Product[] = this.productService.list.filter(product => product.salesPrice < product.price && product.salesPrice > 0 && product.catId === 1)
   constructor(
     private productService: ProductService
   ) { }
@@ -21,13 +22,13 @@ export class Cat01Component implements OnInit {
     if (!Array.isArray(value) || !phrase || !key) {
       return value;
     }
-  
+
     phrase = ('' + phrase).toLowerCase();
-    return value.filter( item => {
+    return value.filter(item => {
       const strItem: string = ('' + item[key]).toLowerCase();
       return strItem.includes(phrase);
     });
-  
+
   }
 
 }
