@@ -14,6 +14,7 @@ import { EmployeeCardComponent } from './common/employee-card/employee-card.comp
 import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { NumberHuPipe } from './pipe/number-hu.pipe';
+import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
 
 
 
@@ -33,6 +34,7 @@ import { NumberHuPipe } from './pipe/number-hu.pipe';
     FooterComponent,
     ProductListComponent,
     NumberHuPipe,
+    KapcsolatComponent
   ],
   imports: [
     BrowserModule,
