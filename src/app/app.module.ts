@@ -15,6 +15,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { NumberHuPipe } from './pipe/number-hu.pipe';
 import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { AdminComponent } from './common/admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,11 +37,14 @@ import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
     FooterComponent,
     ProductListComponent,
     NumberHuPipe,
-    KapcsolatComponent
+    KapcsolatComponent,
+    DataEditorComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

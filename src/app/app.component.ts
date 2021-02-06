@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProductService } from './service/product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Nyolcas terminál';
+
+  list: Observable<Product[]> = this.productService.getAll();
+  }
+
+  constructor(
+    private productService: ProductService
+  ) { }
+  
 }
