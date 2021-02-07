@@ -1,6 +1,8 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-pagi',
@@ -9,6 +11,7 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductPagiComponent implements OnInit {
 
+  productList$: Observable<Product[]> = this.productService.getAll()
 
   index: number = 1;
 
@@ -16,9 +19,10 @@ export class ProductPagiComponent implements OnInit {
 
   @Input() products: Product[];
 
-  constructor() {
 
-  }
+  constructor(
+    public productService: ProductService,
+  ) { }
 
   ngOnInit(): void {
   }
