@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -8,9 +9,8 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
-  productList: Product[] = this.productService.list.filter(item => item.catId === 1);
-  productFeatured: Product[] = this.productList.filter(product => product.featured);
-  productSales: Product[] = this.productService.list.filter(product => product.salesPrice < product.price && product.salesPrice > 0 && product.catId === 1)
+  productList$: Observable<Product[]> = this.productService.getAll();
+
   constructor(
     private productService: ProductService
   ) { }
