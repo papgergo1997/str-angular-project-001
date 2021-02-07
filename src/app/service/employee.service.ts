@@ -19,7 +19,7 @@ export class EmployeeService {
     {
       id: 2,
       name: 'József',
-      position: 'Egyzotikus utak szakértője',
+      position: 'Egzotikus utak szakértője',
       email: 'jozsi@gmail.com',
       phone: '20-1234567',
       image: 'jozsi',
@@ -28,7 +28,7 @@ export class EmployeeService {
     {
       id: 3,
       name: 'Gergő',
-      position: 'Külföldi utak szakértője',
+      position: 'Extrém utak szakértője',
       email: 'gergo@gmail.com',
       phone: '20-1234567',
       image: 'gergo',

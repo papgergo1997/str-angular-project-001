@@ -15,6 +15,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { NumberHuPipe } from './pipe/number-hu.pipe';
 import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './common/admin/admin.component';
+import { FormsModule } from '@angular/forms';
+import { CategoryPipe } from './pipe/category.pipe';
+import { FeaturedPipe } from './pipe/featured.pipe';
+import { SalesPipe } from './pipe/sales.pipe';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { LastproductnovisiblePipe } from './pipe/lastproductnovisible.pipe';
 
 
 
@@ -34,11 +42,19 @@ import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
     FooterComponent,
     ProductListComponent,
     NumberHuPipe,
-    KapcsolatComponent
+    KapcsolatComponent,
+    AdminComponent,
+    CategoryPipe,
+    FeaturedPipe,
+    SalesPipe,
+    DataEditorComponent,
+    LastproductnovisiblePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
