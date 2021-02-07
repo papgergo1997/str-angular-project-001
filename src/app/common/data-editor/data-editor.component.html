@@ -1,0 +1,74 @@
+<h1 class="p-3">Új termék bevitele</h1>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th *ngFor="let col of cols">{{ col.text }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td *ngFor="let col of cols">
+                            <input *ngIf="col.editable" [(ngModel)]="productList[productList.length-1][col.key]"
+                                type="text" class="form-control">
+                            <span *ngIf="!col.editable">{{ productList[productList.length-1][col.key] }}</span>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+
+                                <button (click)="onClickCreate(productList[productList.length-1])"
+                                    class="btn btn-success">
+                                    <i class="fa fa-check">Save</i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h1 class="p-3">Termékek módosítása</h1>
+<br>
+<form class="form-inline my-2 my-lg-0 m-5">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" (keyup)="onChangeSearch($event, 'name')">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés az út nevében</button>
+</form>
+<br>
+<br>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th *ngFor="let col of cols">{{col.text}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of productList | filter: search: filterKey | lastproductnovisible">
+                        <td *ngFor="let col of cols">
+                            <input class="col-12" *ngIf="col.editable" [(ngModel)]="product[col.key]" type="text">
+                            <span *ngIf="!col.editable">{{product[col.key]}}</span>
+                        </td>
+                        <td class="btn-group">
+                            <button (click)="onUpdateClick(product)" class="btn btn-info">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                            <button (click)="onDeleteClick(product)" class="btn btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<app-footer class="footer nav nav-dark bg-dark py-5 text-center d-flex flex-column"></app-footer>

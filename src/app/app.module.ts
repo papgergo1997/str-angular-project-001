@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { CategoryPipe } from './pipe/category.pipe';
 import { FeaturedPipe } from './pipe/featured.pipe';
 import { SalesPipe } from './pipe/sales.pipe';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { LastproductnovisiblePipe } from './pipe/lastproductnovisible.pipe';
 
 
 
@@ -44,7 +46,9 @@ import { SalesPipe } from './pipe/sales.pipe';
     AdminComponent,
     CategoryPipe,
     FeaturedPipe,
-    SalesPipe
+    SalesPipe,
+    DataEditorComponent,
+    LastproductnovisiblePipe
   ],
   imports: [
     BrowserModule,

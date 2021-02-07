@@ -11,12 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class ProductPagiComponent implements OnInit {
 
-  productList$: Observable<Product[]> = this.productService.getAll()
-
   index: number = 1;
-
   buttons: number[] = [];
-
   @Input() products: Product[];
 
 
