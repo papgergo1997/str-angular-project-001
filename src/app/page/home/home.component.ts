@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -9,15 +10,11 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  productList: Product[] = this.productService.list;
 
-  productFeatured: Product[] = this.productService.list.filter(product => product.featured)
-
-  productSales: Product[] = this.productService.list.filter(product => product.salesPrice < product.price && product.salesPrice > 0)
+  productList$: Observable<Product[]> = this.productService.getAll();
 
   constructor(
-    private productService: ProductService
-  ) { }
+    public productService: ProductService) { }
 
   ngOnInit(): void {
   }
