@@ -1,10 +1,10 @@
 <form class="form my-2 my-lg-0 m-5 col-10 col-lg-8 mx-auto d-flex flex-column">
-    <input class="form-control mr-sm-2" type="text" placeholder="Keresés" (keydown)="onChangeSearch($event, 'name')">
+    <input class="form-control mr-sm-2" type="text" placeholder="Keresés" (keyup)="onChangeSearch($event, 'name')">
     <button class="btn btn-outline-primary my-2 my-2 mx-auto" type="submit">Keresés névben</button>
 </form>
 <form class="form my-2 my-lg-0 m-5 col-10 col-lg-8 mx-auto d-flex flex-column">
     <input class="form-control mr-sm-2" type="text" placeholder="Keresés"
-        (keydown)="onChangeSearch($event, 'description')">
+        (keyup)="onChangeSearch($event, 'description')">
     <button class="btn btn-outline-primary my-2 my-2 mx-auto" type="submit">Keresés útleírásban</button>
 </form>
 

@@ -22,16 +22,29 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onUpdateClick(product: Product): void {
-    this.productService.update(product).subscribe(
-      updateProduct => console.log(updateProduct)
-    );
+  onUpdate(product: Product): void {
+    this.productService.update(product).subscribe();
   }
 
-  onDeleteClick(product: Product): void {
-    this.productService.remove(product).subscribe(
-      () => console.log('deleted')
-    );
+  onDelete(product: Product): void {
+    this.productService.remove(product).subscribe()
+  }
+  onCreate(product: Product): void {
+    this.productService.update(product).subscribe();
+
+    this.productService.create({
+      "id": product.id + 1,
+      "catId": 0,
+      "name": "",
+      "description": "",
+      "image": "",
+      "price": 0,
+      "salesPrice": 0,
+      "stock": 0,
+      "featured": false,
+      "featured2": "",
+      "active": true
+    }).subscribe()
   }
 
 }
