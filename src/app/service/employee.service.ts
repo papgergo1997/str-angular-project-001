@@ -19,11 +19,11 @@ export class EmployeeService {
     {
       id: 2,
       name: 'József',
-      position: 'Egzotikus utak szakértője',
+      position: 'Mediterrán utak szakértője',
       email: 'jozsi@gmail.com',
       phone: '20-1234567',
       image: 'jozsi',
-      favoriteDestination: 'St. Lucia',
+      favoriteDestination: 'Horvátország',
     },
     {
       id: 3,
