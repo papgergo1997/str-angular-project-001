@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminComponent } from './common/admin/admin.component';
 import { KapcsolatComponent } from './common/kapcsolat/kapcsolat.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
@@ -23,8 +24,8 @@ const routes: Routes = [
     component: KapcsolatComponent,
   },
   {
-    path: '**',
-    component: HomeComponent,
+    path: 'admin',
+    component: AdminComponent,
   }
 ];
 
