@@ -18,6 +18,7 @@ export class ConfigService {
     { text: 'Külföldi utak', link: '/kulfoldi-utak' },
     { text: 'Belföldi utak', link: '/belfoldi-utak' },
     { text: 'Kapcsolat', link: '/kapcsolat' },
+    { text: 'Admin', link: '/admin' },
   ];
 
   constructor() { }
