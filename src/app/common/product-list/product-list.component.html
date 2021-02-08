@@ -7,6 +7,13 @@
         (keyup)="onChangeSearch($event, 'description')">
     <button class="btn btn-outline-primary my-2 my-2 mx-auto" type="submit">Keresés útleírásban</button>
 </form>
+<!-- <div class="col-12 col-md-6 col-lg-2 mx-auto text-center my-2 my-lg-0 m-5 py-2">
+    <select [(ngModel)]="filterKey" class="form-control my-2">
+        <option *ngFor="let key of productKeys" [value]="key">{{key}}</option>
+    </select>
+    <input [(ngModel)]="phrase" class="form-control mr-sm-2 my-2" type="text" placeholder="Keresés">
+    <button class="btn btn-outline-primary col-12 my-2 my-sm-0 py-2" type="submit">Keresés</button>
+</div> -->
 
 <div class="sort-buttons d-flex justify-content-center mx-auto">
     <div class="row mx-auto justify-content-center">
@@ -24,6 +31,6 @@
 
 <div class="row mx-auto m-o">
     <app-product-card class="col-10 col-md-5 col-lg-3 col-xl-2 mx-auto mt-5"
-        *ngFor="let product of products | filter: search: filterKey | sort: sortKey" [product]=" product">
+        *ngFor="let product of products | filter:search:filterKey | sort: sortKey" [product]=" product">
     </app-product-card>
 </div>
