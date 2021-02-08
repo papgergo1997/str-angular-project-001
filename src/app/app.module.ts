@@ -50,7 +50,7 @@ import { UniversalFilterPipe } from './pipe/universal-filter.pipe';
     SalesPipe,
     DataEditorComponent,
     LastproductnovisiblePipe,
-    UniversalFilterPipe
+    UniversalFilterPipe,
   ],
   imports: [
     BrowserModule,

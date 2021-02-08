@@ -34,12 +34,12 @@
 
 <h1 class="p-3 text-center">Termékek módosítása</h1>
 <br>
-<div class="col-12 col-md-6 col-lg-2 mx-auto mr-lg-auto my-2 my-lg-0 m-5 text-center">
-    <select [(ngModel)]="filterKey" class="form-control my-2">
+<div class="col-12 mx-auto row py-2 product-search">
+    <select [(ngModel)]="filterKey" class="form-control col-1 ml-auto">
         <option *ngFor="let key of productKeys" [value]="key">{{key}}</option>
     </select>
-    <input [(ngModel)]="phrase" class="form-control mr-sm-2 my-2" type="text" placeholder="Search">
-    <button class="btn col btn-outline-primary my-2 my-sm-0" type="submit">Keresés</button>
+    <input [(ngModel)]="phrase" class="form-control mx-1 col-4" type="text" placeholder="Search">
+    <button class="btn btn-outline-primary col-1 mr-auto" type="submit">Keresés</button>
 </div>
 <br>
 <br>
@@ -50,13 +50,14 @@
         <div class="col-12">
             <table class="table table-striped">
                 <thead>
-                    <tr>
-                        <th *ngFor="let col of cols">{{col.text}}</th>
+                    <tr class="table-header">
+                        <th class="table-heads" *ngFor="let col of cols" (click)="onChangeSort(col.key)">{{col.text}}
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr
-                        *ngFor="let product of productList$ | async | lastproductnovisible |universalFilter:filterKey:phrase">
+                        *ngFor="let product of productList$ | async | lastproductnovisible | universalFilter:filterKey:phrase | sort:sortKey">
                         <td *ngFor="let col of cols">
                             <input class="col-12" *ngIf="col.editable" [(ngModel)]="product[col.key]" type="text">
                             <span *ngIf="!col.editable">{{product[col.key]}}</span>
