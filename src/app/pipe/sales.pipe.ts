@@ -6,11 +6,11 @@ import { Product } from '../model/product';
 })
 export class SalesPipe implements PipeTransform {
 
-  transform(productList: Product[], salesPrice: number): Product[] {
-    if (!Array.isArray(productList) || !salesPrice) {
+  transform(productList: Product[]): Product[] {
+    if (!Array.isArray(productList)) {
       return productList
     }
-    return productList.filter(item => item.salesPrice ? salesPrice > 0 : false)
+    return productList.filter(product => product.salesPrice < product.price && product.salesPrice > 0)
   }
 
 }

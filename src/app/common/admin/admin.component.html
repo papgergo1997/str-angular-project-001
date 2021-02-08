@@ -1,30 +1,3 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th *ngFor="let col of cols">{{col.text}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let product of productList$ | async">
-                        <td *ngFor="let col of cols">
-                            <input class="col-12" *ngIf="col.editable" [(ngModel)]="product[col.key]" type="text">
-                            <span *ngIf="!col.editable">{{product[col.key]}}</span>
-                        </td>
-                        <td class="btn-group">
-                            <button (click)="onUpdateClick(product)" class="btn btn-info">
-                                <i class="fa fa-refresh"></i>
-                            </button>
-                            <button (click)="onDeleteClick(product)" class="btn btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<app-footer class="footer nav nav-dark bg-dark py-5 text-center d-flex flex-column"></app-footer>
+<app-data-editor [cols]="cols" [productList]="productList$ | async" (updateProduct)="onUpdate($event)"
+    (deleteProduct)="onDelete($event)" (createProduct)="onCreate($event)">
+</app-data-editor>

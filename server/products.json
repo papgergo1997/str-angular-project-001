@@ -97,7 +97,7 @@
       "name": "Szalajka-völgy túra, Szilvásváradon",
       "description": "1 napos kirándulás. Ellátás nélkül.",
       "image": "szalajka",
-      "price": "13000",
+      "price": 13000,
       "salesPrice": 0,
       "stock": 14,
       "featured": true,
@@ -653,14 +653,27 @@
     {
       "id": 51,
       "catId": 1,
-      "name": "San Francisco,árlátogatás",
+      "name": "San Francisco, gyárlátogatás",
       "description": "Ön is a Tesla fanatikusok egyike? Érdekli a jövő,rtható fejlődés? Utazzon velünk a tech-mogul gyárába!",
       "image": "tesla_san_francisco",
-      "price": 635000,
+      "price": "635000",
       "salesPrice": 0,
       "stock": 33,
       "featured": false,
       "featured2": "special",
+      "active": true
+    },
+    {
+      "id": 52,
+      "catId": 0,
+      "name": "",
+      "description": "",
+      "image": "",
+      "price": 0,
+      "salesPrice": 0,
+      "stock": 0,
+      "featured": false,
+      "featured2": "",
       "active": true
     }
   ]
