@@ -8,8 +8,6 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  phrase: string = '';
-  productKeys: string[] = Object.keys(new Product());
   search: string = '';
   sortKey: string = '';
   filterKey: string = '';

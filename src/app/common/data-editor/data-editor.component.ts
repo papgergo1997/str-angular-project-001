@@ -10,10 +10,11 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./data-editor.component.scss']
 })
 export class DataEditorComponent implements OnInit {
+  sortKey: string = '';
   phrase: string = '';
   productKeys: string[] = Object.keys(new Product());
   search: string = '';
-  filterKey: string = '';
+  filterKey: string = 'name';
   productList$: Observable<Product[]> = this.productService.getAll();
   @Input() cols: ITableCol[] = [];
   @Input() productList: Product[] = [];
@@ -41,6 +42,9 @@ export class DataEditorComponent implements OnInit {
   onClickCreate(product: Product): void {
     product.catId = parseInt(product.catId);
     this.createProduct.emit(product)
+  }
+  onChangeSort(data: string): void {
+    this.sortKey = data;
   }
 
 }
