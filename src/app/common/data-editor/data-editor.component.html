@@ -34,10 +34,13 @@
 
 <h1 class="p-3">Termékek módosítása</h1>
 <br>
-<form class="form-inline my-2 my-lg-0 m-5">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search" (keyup)="onChangeSearch($event, 'name')">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés az út nevében</button>
-</form>
+<div class="col-12 col-md-6 col-lg-2 mx-auto mx-lg-0 mr-lg-auto my-2 my-lg-0 m-5">
+    <select [(ngModel)]="filterKey" class="form-control">
+        <option *ngFor="let key of productKeys" [value]="key">{{key}}</option>
+    </select>
+    <input [(ngModel)]="phrase" class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Keresés</button>
+</div>
 <br>
 <br>
 
@@ -52,7 +55,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of productList |lastproductnovisible | filter: search: filterKey">
+                    <tr
+                        *ngFor="let product of productList$ | async | lastproductnovisible |universalFilter:filterKey:phrase">
                         <td *ngFor="let col of cols">
                             <input class="col-12" *ngIf="col.editable" [(ngModel)]="product[col.key]" type="text">
                             <span *ngIf="!col.editable">{{product[col.key]}}</span>
