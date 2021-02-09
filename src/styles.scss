@@ -19,6 +19,7 @@
 $mainBlue: rgb(37, 170, 226);
 $mainGrey: rgb(53, 58, 64);
 $mainShadow: 0 0 9px black;
+$mainFont: "catamaran", Arial, Helvetica, sans-serif;
 
 
 body {
@@ -34,11 +35,11 @@ body {
 
 .navbar-brand {
     color:  $mainBlue!important;
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $mainFont;
 }
 
 .nav-link {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $mainFont;
 }
 /*Headlines*/
 
@@ -110,7 +111,7 @@ body {
     color: $mainBlue;
     background-color: $mainGrey;
     box-shadow: $mainShadow;
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $mainFont;
 }
 
 /*Product-list*/
@@ -120,7 +121,7 @@ body {
 }
 
 .list-title {    
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $mainFont;
 }
 
 .list-text {
@@ -133,6 +134,28 @@ body {
     .card {
         background-color: #efefef;
     }
+}
+
+/*Kapcsolat page*/
+app-kapcsolat {
+    font-family: $mainFont;
+    font-weight: bold;
+    .footer {
+        font-weight: normal;
+    }
+}
+
+/*Admin page*/
+app-admin {
+    font-family: $mainFont;
+    font-weight: bold;
+    .footer {
+        font-weight: normal;
+    }
+}
+
+.table-heads:hover {
+    cursor: pointer;
 }
 
 /*Footer*/

@@ -23,6 +23,7 @@ import { FeaturedPipe } from './pipe/featured.pipe';
 import { SalesPipe } from './pipe/sales.pipe';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
 import { LastproductnovisiblePipe } from './pipe/lastproductnovisible.pipe';
+import { UniversalFilterPipe } from './pipe/universal-filter.pipe';
 
 
 
@@ -48,7 +49,8 @@ import { LastproductnovisiblePipe } from './pipe/lastproductnovisible.pipe';
     FeaturedPipe,
     SalesPipe,
     DataEditorComponent,
-    LastproductnovisiblePipe
+    LastproductnovisiblePipe,
+    UniversalFilterPipe,
   ],
   imports: [
     BrowserModule,
