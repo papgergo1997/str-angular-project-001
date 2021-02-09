@@ -14,6 +14,7 @@ export class ProductPagiComponent implements OnInit {
   index: number = 1;
   buttons: number[] = [];
   @Input() products: Product[];
+  @Input() productList: Product[] = [];
 
 
   constructor(
