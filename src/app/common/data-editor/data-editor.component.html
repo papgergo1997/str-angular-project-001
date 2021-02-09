@@ -77,12 +77,23 @@
     </div>
 </div>
 
-<div class="text-center m-5">
-    <button class="btn btn-outline-dark" (click)="paginationBack(productList)">Vissza</button>
+<div class="row d-flex justify-content-center align-items-center m-5">
+    <span>Hány termék jelenjen meg:</span>
+    <select [(ngModel)]="pagilength" class="form-control col-1 mr-5 ml-3">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+    </select>
+    <div>
+        <button class="btn btn-outline-dark" (click)="paginationBack(productList)">Vissza</button>
 
-    <button class="btn btn-outline-dark" *ngFor="let button of buttonsNumberArray(productList)"
-        (click)="paginationNumber(productList, button)">{{ button }}</button>
-    <button class="btn btn-outline-dark" (click)="paginationNext(productList)">Előre</button>
+        <button class="btn btn-outline-dark"
+            *ngFor="let button of buttonsNumberArray(productList$ | async | lastproductnovisible | universalFilter:filterKey:phrase | sort:sortKey)"
+            (click)="paginationNumber(productList, button)">{{ button }}</button>
+        <button class="btn btn-outline-dark" (click)="paginationNext(productList)">Előre</button>
+    </div>
+
 </div>
 
 

@@ -18,6 +18,7 @@ export class DataEditorComponent implements OnInit {
   productKeys: string[] = Object.keys(new Product());
   search: string = '';
   filterKey: string = 'name';
+  pagilength: number = 5;
   productList$: Observable<Product[]> = this.productService.getAll();
   @Input() cols: ITableCol[] = [];
   @Input() productList: Product[] = [];
@@ -51,7 +52,7 @@ export class DataEditorComponent implements OnInit {
   }
 
   buttonsNumberArray(array: Product[]): number[] {
-    for (let i = 1; i <= Math.ceil(array.length / 5); i++) {
+    for (let i = 1; i <= Math.ceil(array.length / this.pagilength); i++) {
       this.buttons.push(i);
     }
     return this.buttons;
@@ -59,17 +60,17 @@ export class DataEditorComponent implements OnInit {
   paginationNumber(array: Product[], pagi: number): Product[] {
     this.index = pagi;
     this.buttons = [];
-    return array.slice((this.index - 1) * 5, this.index * 5);
+    return array.slice((this.index - 1) * this.pagilength, this.index * this.pagilength);
   }
   paginationNext(array: Product[]): Product[] {
     this.index++;
-    if (this.index > Math.ceil(this.productList.length / 5)) { this.index = 1 }
-    return array.slice((this.index - 1) * 5, this.index * 5)
+    if (this.index > Math.ceil(this.productList.length / this.pagilength)) { this.index = 1 }
+    return array.slice((this.index - 1) * this.pagilength, this.index * this.pagilength)
   }
   paginationBack(array: Product[]): Product[] {
     this.index--;
-    if (this.index < 1) { this.index = Math.ceil(this.productList.length / 5) }
-    return array.slice((this.index - 1) * 5, this.index * 5)
+    if (this.index < 1) { this.index = Math.ceil(this.productList.length / this.pagilength) }
+    return array.slice((this.index - 1) * this.pagilength, this.index * this.pagilength)
   }
 
 }
